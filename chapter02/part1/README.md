@@ -7,7 +7,7 @@ OpenCV(Open Source Computer Vision Library)는 학술 연구뿐만 아니라 실
 * ### 자율주행 및 ADAS (첨단 운전자 보조 시스템)
     * **기능:** 차량 카메라 센서를 통해 차선을 인식하고 전방의 보행자나 차량을 탐지합니다.
     * **핵심 기술:** OpenCV의 **DNN(Deep Neural Network) 모듈**을 활용하여 YOLO, SSD와 같은 객체 검출(Object Detection) 딥러닝 모델을 실시간 추론(Inference)하는 데 주로 사용합니다.
-* ### 스마트폰 카메라 앱의 얼굴 인식 및 필터**
+* ### 스마트폰 카메라 앱의 얼굴 인식 및 필터
     * **기능:** 카메라 뷰파인더에서 사용자의 얼굴을 찾아 초점을 맞추거나 AR 스티커를 합성합니다.
     * **핵심 기술:** 하아 캐스케이드(Haar Cascade) 방식이나 랜드마크 검출(Landmark Detection) 알고리즘을 이용해 얼굴의 바운딩 박스(Bounding Box)와 주요 특징점을 빠르고 정확하게 찾아냅니다.
 
