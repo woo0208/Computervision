@@ -1,29 +1,42 @@
+// *********************************
+// ì œ ëª©  : ì‹¤ìŠµê³¼ì œ2 - ê¸°ì´ˆ ë°°ì—´ì„ ì´ìš©í•œ ì˜ìƒ ì¶œë ¥
+// ë‚  ì§œ  : 2026ë…„ 3ì›” 12ì¼
+// ì‘ì„±ì : 2603043 í•œì •ìš°
+// *********************************
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
 using namespace cv;
 using namespace std;
 
-int main()
-{
-    int count = 0;
-    cout << "Hello OpenCV" << CV_VERSION << endl;  // ¹öÀü Á¤º¸ È®ÀÎ
-    Mat img0,img1,img2;
-    img0 = imread("img0.png");                     // ÀÌ¹ÌÁö1 °¡Á®¿À±â
-    img1 = imread("img1.png");                     // ÀÌ¹ÌÁö2 °¡Á®¿À±â
-    img2 = imread("img2.png");                     // ÀÌ¹ÌÁö3 °¡Á®¿À±â
+int main() {
+    // 1. Mat ê°ì²´ ë°°ì—´ ì„ ì–¸ (ìˆ˜ì—… ì§„ë„ì— ë§ì¶˜ C-ìŠ¤íƒ€ì¼ ë°°ì—´)
+    Mat imgs[3];
 
-    if (img0.empty() || img1.empty() || img2.empty()) {  // ÇÏ³ªÀÇ ÀÌ¹ÌÁö¶óµµ ºñ¾îÀÖ´Ù¸é ¿¡·¯ ¹İÈ¯
-        cerr << "Image load failed" << endl;
-        return -1;
+    // 2. ë°˜ë³µë¬¸ì„ ì´ìš©í•œ ì˜ìƒ ë¡œë“œ (ìµœëŒ€í•œ ì§§ê²Œ êµ¬í˜„)
+    for (int i = 0; i < 3; i++) {
+        // formatì„ ì‚¬ìš©í•˜ì—¬ img0.png, img1.png, img2.pngë¥¼ ì°¨ë¡€ë¡œ ì½ìŒ
+        imgs[i] = imread(format("img%d.png", i));
+
+        if (imgs[i].empty()) {
+            cerr << "Image load failed!" << endl;
+            return -1;
+        }
     }
+
+    // 3. í•˜ë‚˜ì˜ ìœˆë„ìš°ì— 1ì´ˆ ê°„ê²©ìœ¼ë¡œ ë¬´í•œ ë°˜ë³µ ì¶œë ¥
     namedWindow("image");
+    int idx = 0; // í˜„ì¬ ì¶œë ¥í•  ë°°ì—´ì˜ ì¸ë±ìŠ¤
+
     while (true) {
-        if (count == 0) imshow("image", img0);      // count °¡ 0ÀÌ¸é ÀÌ¹ÌÁö1À»
-        if (count == 1) imshow("image", img1);      // count °¡ 1ÀÌ¸é ÀÌ¹ÌÁö2¸¦
-        if (count == 2) imshow("image", img2);      // count °¡ 2ÀÌ¸é ÀÌ¹ÌÁö3À»
-        if (waitKey(1000) == 27) break;             // ESC ¸¦ ´©¸£¸é Á¾·áÇÏµµ·Ï ¼³Á¤
-        count = (count + 1) % 3;                    // count °¡ °è¼Ó 0,1,2 ¸¦ ¹İº¹ÇÏµµ·Ï ¼ö½Ä ¼³Á¤
+        imshow("image", imgs[idx]);
+
+        // [í•µì‹¬] waitKey 1íšŒ í˜¸ì¶œë¡œ 1000ms(1ì´ˆ) ëŒ€ê¸° ë° í‚¤ ì…ë ¥ í™•ì¸
+        if (waitKey(1000) == 27) break; // ESC í‚¤ë¥¼ ëˆ„ë¥´ë©´ ì¢…ë£Œ
+
+        // ì¸ë±ìŠ¤ ìˆœí™˜ ì—°ì‚°: 0 -> 1 -> 2 -> 0 ...
+        idx = (idx + 1) % 3;
     }
 
     return 0;
