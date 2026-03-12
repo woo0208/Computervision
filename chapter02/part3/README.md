@@ -4,7 +4,9 @@
 ---
 
 ## 실습과제 2 실행결과
-https://github.com/user-attachments/assets/a8c0277c-ad12-4948-8f87-65411cd08fdf
+
+https://github.com/user-attachments/assets/ce43608d-fa25-476d-916b-0e21ffe81bd0
+
 
 ---
 
