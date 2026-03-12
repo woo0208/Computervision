@@ -10,4 +10,10 @@ https://github.com/user-attachments/assets/ce43608d-fa25-476d-916b-0e21ffe81bd0
 
 ---
 
+## 실습과제 3 실행결과
+
+
+https://github.com/user-attachments/assets/5e84c57f-8fa7-4005-8199-b91014348ff1
+
+
 
