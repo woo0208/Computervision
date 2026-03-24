@@ -12,7 +12,7 @@ using namespace cv;
 
 
 int main() {
-	// 초기 이미지 흰색으로 설정
+	// Mat 객체 생성: 세로 400, 가로 300, 8비트 3채널(BGR) 컬러 타입, 초기 화소값은 White(255, 255, 255)로 설정
 	Mat img(400, 300, CV_8UC3, Scalar(255, 255, 255));
 	int B, G, R;
 	cout << "B값을 입력하라: ";
