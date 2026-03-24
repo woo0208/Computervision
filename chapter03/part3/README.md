@@ -19,3 +19,10 @@ https://github.com/user-attachments/assets/48dc8223-e3bc-4bdd-8750-eec08d9b4ecc
 
 https://github.com/user-attachments/assets/6537fd89-b6c2-40b0-be92-b31dfc360fac
 
+---
+
+# 실습과제5 - 실행결과
+
+
+https://github.com/user-attachments/assets/13ce9c82-cd62-4e40-ae35-bd47bb32a601
+
