@@ -1,3 +1,9 @@
+// *******************************************
+// 제목: 실습 과제2
+// 날짜: 26년 3월 25일
+// 작성자: 2603043 한정우
+// *******************************************
+
 #include <opencv2/opencv.hpp>
 #include <iostream>
 
@@ -5,7 +11,6 @@ using namespace std;
 using namespace cv;
 
 int main() {
-	// 소수점 있으므로 double 타입 사용
 	uchar matdata[] = { 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 };
 
 	Mat img1(3, 5, CV_8UC1, &matdata);
