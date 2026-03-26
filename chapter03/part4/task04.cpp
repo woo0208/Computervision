@@ -27,27 +27,23 @@ int main() {
     // 얕은 복사 (Shallow Copy)
     // Rect(x, y, width, height)를 사용 => x=103, y=36 위치에서 가로 79, 세로 99 크기의 영역을 지정.
     // 이때 copybon은 새로운 메모리를 할당받는 것이 아니라, img의 해당 영역 데이터 메모리 주소(Pointer)만 공유
-    Mat copybon = img(Rect(103, 36, 79, 99));
+    Mat bluePoint = img(Rect(103, 36, 79, 99));
 
     // 화소값 일괄 변경 (마스킹/채우기)
     // copybon의 모든 픽셀 값을'파란색(Blue)'
     // copybon은 img와 메모리를 공유하는 '얕은 복사' 상태이므로, 이 연산은 원본 img 영상의 해당 사각형 영역을 파랗게 변형
-    copybon = Scalar(255, 0, 0);
+    bluePoint = Scalar(255, 0, 0);
 
     int count = 0;
 
+    Mat loop_img[2] = { img_original, img };
+
     // 무한 루프를 통한 영상 교차 출력 (깜빡임 효과)
     while (true) {
-        // 짝수 => 훼손되지 않은 원본 영상(깊은 복사본)을 출력합니다.
-        if (count % 2 == 0) {
-            imshow("img", img_original);
-        }
-        // 홀수 => ROI 영역이 파란색으로 변형된 영상을 출력합니다.
-        else {
-            imshow("img", img);
-        }
+        
+        imshow("img", loop_img[count]);
 
-        count++;
+        count = (count + 1) % 2;
 
         // 키보드 입력 대기 및 딜레이 제어(1초)
         int key = waitKey(1000);
