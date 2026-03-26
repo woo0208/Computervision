@@ -33,6 +33,7 @@
 # 실습과제4 - 실행결과
 
 
-https://github.com/user-attachments/assets/49205650-e4c6-454b-89b3-e7cc890b4128
+https://github.com/user-attachments/assets/72d75a9e-ca25-43ba-aa9c-f90e1017819c
+
 
 
