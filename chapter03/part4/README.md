@@ -47,3 +47,9 @@ https://github.com/user-attachments/assets/72d75a9e-ca25-43ba-aa9c-f90e1017819c
 https://github.com/user-attachments/assets/ba53e977-527e-4241-9e84-68c9aec4f397
 
 
+# 실습과제6 - 실행결과
+<img width="1559" height="874" alt="image" src="https://github.com/user-attachments/assets/e0d5e9ee-720a-40a0-a4d1-3335ec95660a" />
+<img width="1554" height="879" alt="image" src="https://github.com/user-attachments/assets/badda0e1-58d2-4d19-b4b9-3a1426638aff" />
+
+
+
