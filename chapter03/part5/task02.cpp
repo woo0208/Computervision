@@ -14,14 +14,14 @@ int main() {
     // 영상 불러오기
     Mat img = imread("lenna.bmp", IMREAD_GRAYSCALE);
 
-    for (int y = 0; y < img.rows; y += 128) { // 512x512이므로 4등분선 위치 128로 설정
+    for (int y = 0; y < img.rows; y += img.rows/4) { // 512x512이므로 4등분선 위치 128로 설정
         for (int x = 0; x < img.cols; x++) {
             img.at<uchar>(y, x) = 255;
         }
     }
 
     
-    for (int x = 0; x < img.cols; x += 128) { // 512x512이므로 4등분선 위치 128로 설정
+    for (int x = 0; x < img.cols; x += img.cols/4) { // 512x512이므로 4등분선 위치 128로 설정
         for (int y = 0; y < img.rows; y++) {
             img.at<uchar>(y, x) = 255;
         }
