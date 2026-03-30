@@ -14,7 +14,8 @@ int main() {
     // 영상 불러오기
     Mat img = imread("lenna.bmp", IMREAD_COLOR);
 
-    for (int y = 0; y < img.rows; y += 128) { // 512x512이므로 4등분선 위치 128로 설정
+
+    for (int y = 0; y < img.rows; y += img.rows/4) { // 4등분이기 때문에 rows/4
         for (int x = 0; x < img.cols; x++) {
             img.at<Vec3b>(y, x)[0] = 255;
             img.at<Vec3b>(y, x)[1] = 255;
@@ -23,7 +24,7 @@ int main() {
     }
 
 
-    for (int x = 0; x < img.cols; x += 128) { // 512x512이므로 4등분선 위치 128로 설정
+    for (int x = 0; x < img.cols; x += img.cols / 4) { // 4등분이기 때문에 cols/4
         for (int y = 0; y < img.rows; y++) {
             img.at<Vec3b>(y, x)[0] = 255;
             img.at<Vec3b>(y, x)[1] = 255;
