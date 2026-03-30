@@ -8,3 +8,6 @@
 
 ---
 
+# 실습과제3 - 실행결과
+<img width="510" height="541" alt="image" src="https://github.com/user-attachments/assets/0fa0cc05-5969-4637-aaf0-6bbc82540486" />
+
