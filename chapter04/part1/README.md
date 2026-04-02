@@ -14,3 +14,11 @@
 
 
 <img width="1450" height="829" alt="image" src="https://github.com/user-attachments/assets/cf208c53-df09-447f-b000-9cac0356106b" />
+
+
+---
+
+# 실습과제 4 - 실행결과
+
+
+<img width="1280" height="511" alt="image" src="https://github.com/user-attachments/assets/133b6780-0aab-434f-82f0-a858c32a0eaf" />
