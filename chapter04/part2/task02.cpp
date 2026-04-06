@@ -12,20 +12,20 @@ using namespace cv;
 
 int main() {
 	VideoCapture cap("stopwatch.avi");
-	if(!cap.isOpened()) {
+	if (!cap.isOpened()) {
 		cerr << "Camera open failed!" << endl;
 		return -1;
 	}
 
 
-	Mat frame, inversed;
+	Mat frame, bright;
 	while (true) {
 		cap >> frame;
 		if (frame.empty()) break;
 
-		inversed = frame + (Scalar(100, 100, 100));
+		bright = frame + (Scalar(100, 100, 100));
 		imshow("frame", frame);
-		imshow("inversed", inversed);
+		imshow("bright", bright);
 		int key = waitKey(33);
 		if (key == 'q' || key == 'Q') {
 			break;
