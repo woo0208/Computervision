@@ -6,7 +6,7 @@ using namespace cv;
 
 int main() {
 	VideoCapture cap("stopwatch.avi");
-	if(!cap.isOpened()) {
+	if (!cap.isOpened()) {
 		cerr << "Camera open failed!" << endl;
 		return -1;
 	}
@@ -24,12 +24,15 @@ int main() {
 
 		outline = frame.clone();
 
-		
+
 		int centerX = outline.cols / 2;
 		int centerY = outline.rows / 2;
-		line(outline, Point(0, centerY), Point(outline.cols, centerY), Scalar(0, 0, 255), 2);
+		line(outline, Point(0, centerY), Point(outline.cols, centerY), Scalar(0, 0, 255), 1);
 
-		line(outline, Point(centerX, 0), Point(centerX, outline.rows), Scalar(0, 0, 255), 2);
+		line(outline, Point(centerX, 0), Point(centerX, outline.rows), Scalar(0, 0, 255), 1);
+
+		outputVideo.write(outline);
+
 		imshow("frame", frame);
 		imshow("outline", outline);
 		int key = waitKey(33);
