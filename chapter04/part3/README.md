@@ -7,3 +7,10 @@
 
 
 # 실습과제 2
+
+
+<img width="510" height="539" alt="image" src="https://github.com/user-attachments/assets/74ada85a-b363-4829-876a-1bf29e2002e3" />
+
+
+---
+
