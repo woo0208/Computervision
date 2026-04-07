@@ -45,3 +45,11 @@
 
 <img width="510" height="539" alt="image" src="https://github.com/user-attachments/assets/12a4dd52-5197-43c1-8677-18f5f8107b03" />
 
+
+---
+
+
+# 실습과제 7
+
+https://github.com/user-attachments/assets/adf410a9-2355-421f-ae23-f4e1336d4dc8
+
