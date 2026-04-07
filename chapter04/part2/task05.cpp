@@ -46,7 +46,7 @@ int main() {
             }
         }
 
-        // [핵심 로직] isRecording 상태가 true인 동안 매 프레임을 파일에 기록
+        // isRecording 상태가 true인 동안 매 프레임을 파일에 기록
         if (isRecording) {
             outputVideo.write(frame); 
         }
