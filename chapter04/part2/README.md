@@ -43,3 +43,11 @@
 
 <img width="641" height="507" alt="image" src="https://github.com/user-attachments/assets/b36c4a57-4cb3-4d15-b6b4-020399886de0" />
 <img width="906" height="846" alt="image" src="https://github.com/user-attachments/assets/401614af-45a6-4d9f-8ba6-92a339616fa6" />
+
+
+---
+
+# 실습과제 5 - 실행 결과
+<img width="642" height="514" alt="image" src="https://github.com/user-attachments/assets/8243db80-8514-495f-a164-1d45071d210b" />
+<img width="676" height="513" alt="image" src="https://github.com/user-attachments/assets/b946c5d5-2841-4fc4-a323-f54ad3e8c597" />
+
