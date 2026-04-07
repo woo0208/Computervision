@@ -35,3 +35,13 @@
 # 실습과제 5
 
 <img width="604" height="232" alt="image" src="https://github.com/user-attachments/assets/b73333be-57dc-4964-a11d-45ba6b363913" />
+
+
+---
+
+
+# 실습과제 6
+
+
+<img width="510" height="539" alt="image" src="https://github.com/user-attachments/assets/12a4dd52-5197-43c1-8677-18f5f8107b03" />
+
