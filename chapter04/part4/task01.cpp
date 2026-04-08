@@ -12,9 +12,6 @@ int main() {
 		return -1;
 	}
 
-	namedWindow("img");
-	setMouseCallback("img", on_mouse);
-
 
 	int lineX_start = img.rows / 6;
 	int lineY_start = img.cols / 6;
