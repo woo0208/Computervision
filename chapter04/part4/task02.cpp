@@ -1,51 +1,68 @@
-
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
 using namespace std;
 using namespace cv;
-void event_handler(int event, int x, int y, int flags, void* userdata);
-Mat img;
-int main() {
-	img = imread("lenna.bmp");
-	if (img.empty()) {
-		cerr << "Image load failed!" << endl;
-		return -1;
-	}
 
-	namedWindow("img");
-	setMouseCallback("img", event_handler);
-	int key;
-	while (true) {
-		imshow("img", img);
-		key = waitKey(10);
-		if (key == 'q') break;
-	}
-	return 0;
+struct metadata {
+    Mat img;
+    // 초기화 리스트를 통해 0으로 초기화
+    int mousemove = 0;
+    int upbtn = 0;
+    int downbtn = 0;
+};
+
+void on_mouse(int event, int x, int y, int flag, void* userdata) {
+    metadata* count = (metadata*)userdata;
+    
+    // 이미지가 비어있는지 확인 (방어적 프로그래밍)
+    if (count->img.empty()) return;
+
+    switch (event)
+    {
+    case EVENT_MOUSEMOVE:
+        count->mousemove++;
+        cout << "EVENT_MOUSEMOVE: " << count->mousemove << endl;
+        break;
+
+    case EVENT_LBUTTONDOWN:
+        count->downbtn++;
+        cout << "EVENT_LBUTTONDOWN: " << count->downbtn << endl;
+        break;
+
+    case EVENT_LBUTTONUP:
+        count->upbtn++;
+        cout << "EVENT_LBUTTONUP: " << count->upbtn << endl;
+        break;
+    }
+
+    // 마우스 이벤트가 발생할 때마다 윈도우 갱신
+    imshow("img", count->img);
 }
 
+int main() {
+    metadata data;
+    data.img = imread("lenna.bmp");
 
+    // 이미지 로드 확인
+    if (data.img.empty()) {
+        cout << "이미지를 찾을 수 없습니다." << endl;
+        return -1;
+    }
 
-void event_handler(int event, int x, int y, int flags, void* userdata)
-{
-	static int downCount;
-	static int upCount;
-	static int moveCount;
-	static Point ptOld;
-	switch (event) {
-	case EVENT_LBUTTONDOWN:
-		downCount++;
-		cout << "EVENT_LBUTTONDOWN: " << downCount << endl;
-		break;
-	case EVENT_LBUTTONUP:
-		upCount++;
-		cout << "EVENT_LBUTTONUP: " << upCount << endl;
-		break;
-	case EVENT_MOUSEMOVE:
-		moveCount++;
-		cout << "EVENT_MOUSEMOVE: " << moveCount << endl;
-		break;
-	default:
-		break;
-	}
+    // 1. 먼저 윈도우를 생성해야 함
+    namedWindow("img");
+
+    // 2. 초기 이미지를 먼저 보여줌
+    imshow("img", data.img);
+
+    // 3. 그 후에 콜백 함수 등록
+    setMouseCallback("img", on_mouse, &data);
+
+    while (true) {
+        if (waitKey(10) == 'q') break;
+    }
+
+    destroyAllWindows();
+    return 0;
 }
