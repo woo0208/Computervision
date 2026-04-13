@@ -21,10 +21,11 @@ int main() {
     }
 
     namedWindow("src");
-    imshow("src", data.src);
-    //setMouseCallback("src", on_mouse, &data);
     createTrackbar("level", "src", 0, 100, on_change, &data);
-    waitKey();
+    while (true) {
+        imshow("src", data.src);
+        waitKey(10);
+    }
     return 0;
 }
 
@@ -32,6 +33,5 @@ void on_change(int pos, void* userdata) {
     Data* pdata = (Data*)userdata;
     pdata->pos = pos;
     cout << "트랙바 위치: " << pdata->pos << endl;
-    circle(pdata->src, Point(pdata->src.rows/2,pdata->src.cols/2), pdata->pos, Scalar(0,255,0),2);
-    imshow("src", pdata->src);
+    circle(pdata->src, Point(pdata->src.rows / 2, pdata->src.cols / 2), pdata->pos, Scalar(0, 255, 0), 2);
 }
