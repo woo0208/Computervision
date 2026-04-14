@@ -60,8 +60,6 @@ void event_handler(int event, int x, int y, int flags, void* userdata) {
             namedWindow("ROI");
             imshow("ROI", roi);
 
-            // (옵션) 원본에 사각형 그리기 - 시각적 확인용
-            rectangle(img, roi_rect, Scalar(0, 255, 0), 2);
         }
         break;
     }
