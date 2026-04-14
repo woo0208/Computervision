@@ -15,3 +15,10 @@ https://github.com/user-attachments/assets/aa94f207-d94f-4a6f-8663-121ec893cf4b
 
 # 실습과제 3 - 실행결과
 
+<img width="973" height="547" alt="image" src="https://github.com/user-attachments/assets/9ed63a40-6d00-4aaa-ade5-9a49243dbd96" />
+
+
+---
+
+# 실습과제 4 - 실행결과
+
