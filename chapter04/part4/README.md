@@ -5,3 +5,13 @@
 
 ---
 
+# 실습과제 2 - 실행결과
+
+
+https://github.com/user-attachments/assets/aa94f207-d94f-4a6f-8663-121ec893cf4b
+
+
+---
+
+# 실습과제 3 - 실행결과
+
