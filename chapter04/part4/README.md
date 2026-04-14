@@ -34,3 +34,11 @@ https://github.com/user-attachments/assets/aa94f207-d94f-4a6f-8663-121ec893cf4b
 ---
 
 # 실습과제 6 - 실행결과
+
+
+https://github.com/user-attachments/assets/6340c7ed-3694-432b-8fb0-f285e15b46aa
+
+---
+
+# 실습과제 7 - 실행결과
+
