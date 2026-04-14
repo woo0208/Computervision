@@ -22,3 +22,11 @@ https://github.com/user-attachments/assets/aa94f207-d94f-4a6f-8663-121ec893cf4b
 
 # 실습과제 4 - 실행결과
 
+<img width="974" height="545" alt="image" src="https://github.com/user-attachments/assets/1fa3bddc-fd13-4eab-b89d-d1e2fe800a8a" />
+
+
+---
+
+# 실습과제 5 - 실행결과
+
+
