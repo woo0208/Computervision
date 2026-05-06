@@ -9,7 +9,7 @@
 using namespace std;
 using namespace cv;
 
-void on_mouse(int event,int x,int y,int flag, void* userdata);
+void on_mouse(int event, int x, int y, int flag, void* userdata);
 
 struct Data {
 	Mat img;
@@ -17,9 +17,13 @@ struct Data {
 
 int main() {
 	Data data;
-	data.img = imread("lenna.bmp",IMREAD_GRAYSCALE);
+	data.img = imread("lenna.bmp", IMREAD_GRAYSCALE);
+	if (data.img.empty()) {
+		cerr << "Image load failed!" << endl;
+		return -1;
+	}
 	namedWindow("img");
-	setMouseCallback("img",on_mouse,&data);
+	setMouseCallback("img", on_mouse, &data);
 	while (true) {
 		imshow("img", data.img);
 		int key = waitKey(30);
