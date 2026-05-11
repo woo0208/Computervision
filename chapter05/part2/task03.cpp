@@ -20,12 +20,12 @@ int main() {
 	Mat dst = src.clone();
 
 	//float alpha = 100.0f;
-	float alpha = 1.f;
+	float alpha = -0.5f;
 
 	for (int y = 0; y < src.rows; y++) {
 		for (int x = 0; x < src.cols; x++) {
 			int pixel = src.at<uchar>(y, x);
-			float result = (pixel - 128) * alpha + 128;
+			float result = pixel + (pixel - 128) * alpha;
 			int copy = (int)(result + 0.5f);
 			dst.at<uchar>(y, x) = copy > 255 ? 255 : copy < 0 ? 0 : copy;
 		}
