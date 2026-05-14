@@ -44,6 +44,15 @@ dst(x, y) = {src(x, y) - G_min} / {G_max - G_min} * 255
 
 ---
 
+### [실습과제 4]
+
+---
+
+
+### [실습과제 5]
+
+<img width="1029" height="492" alt="image" src="https://github.com/user-attachments/assets/ce790f57-c08d-44ef-a902-f35fc6a47780" />
+
 
 ### [실습과제 4]
 
