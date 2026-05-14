@@ -35,3 +35,11 @@ dst(x, y) = {src(x, y) - G_min} / {G_max - G_min} * 255
 **2. 히스토그램 평활화 (Histogram Equalization)**
 * **변환 방식:** 영상 내 픽셀 값들의 빈도수를 기반으로 확률을 구하고, 누적 분포 함수(CDF, Cumulative Distribution Function)를 이용하여 픽셀 값을 새로운 밝기 값으로 재할당하는 **비선형 변환(Non-linear Transformation)** 기법입니다.
 * **분포 형태 (모양):** 특정 밝기 영역에 편중되어 있던 픽셀들이 전체 밝기 영역에 걸쳐 균일한 확률 빈도로 평탄하게 재분배되므로, 원본 히스토그램의 모양이 완전히 달라집니다. 밝기 분포가 한쪽으로 심하게 치우친 영상의 명암비를 극대화할 때 주로 사용됩니다.
+
+---
+
+### 실습과제 3
+
+<img width="903" height="462" alt="image" src="https://github.com/user-attachments/assets/4b7864b6-efb0-48fc-af4e-32ff44cccb04" />
+
+---
