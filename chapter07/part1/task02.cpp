@@ -4,19 +4,6 @@
 using namespace cv;
 using namespace std;
 
-float* change(float data[], int size) {
-    float sum = 0;
-
-    for (int i = 0; i < size; i++) {
-        if (i == 4) {
-            data[i] = 9;
-            continue;
-        }
-        data[i] = -1;
-    }
-
-    return data;
-}
 
 int main(void)
 {
@@ -32,14 +19,10 @@ int main(void)
 
     // 엠보싱 필터 커널
     float data[] = {
-         1,  1, 0,
-         1,  0, -1,
-         0, -1, -1
+         -1, -1, -1,
+         -1,  9, -1,
+         -1, -1, -1
     };
-
-    // 변환 적용
-    int real_size = sizeof(data) / sizeof(data[0]);
-    change(data, real_size);
 
     Mat emboss(3, 3, CV_32FC1, data);
 
