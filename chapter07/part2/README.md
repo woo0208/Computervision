@@ -5,3 +5,8 @@
 
 ---
 
+## 실습과제 3
+
+<img width="957" height="700" alt="image" src="https://github.com/user-attachments/assets/cc8a5bc4-f0c1-4244-8366-e62dbe82ad46" />
+
+---
