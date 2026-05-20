@@ -7,13 +7,11 @@ using namespace std;
 
 int main(void)
 {
-    // 시간 측정의 변별력을 높이기 위해 어느 정도 크기가 있는 영상을 로드하거나 생성합니다.
-    // 여기서는 1000x1000 크기의 가상 그레이스케일 영상을 생성하여 사용합니다.
-    Mat src = Mat::zeros(1000, 1000, CV_8UC1);
+    Mat src = Mat::zeros(100, 100, CV_8UC1);
     randu(src, Scalar(0), Scalar(255)); // 무작위 노이즈로 채움
 
     Mat dst;
-    int mask_sizes[] = { 3, 10, 30 };
+    int mask_sizes[] = { 3, 10, 30 ,100,300,1000,3000,10000,30000};
 
     cout << "===== [방법 1] std::chrono 이용 실행시간 측정 =====" << endl;
     for (int ksize : mask_sizes) {
