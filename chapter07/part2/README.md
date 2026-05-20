@@ -1,7 +1,7 @@
 
 
 ## 실습과제 2
-<img width="1109" height="283" alt="image" src="https://github.com/user-attachments/assets/9e8a3783-cf35-420c-a891-1360d53bdebb" />
+<img width="1111" height="624" alt="image" src="https://github.com/user-attachments/assets/785eae80-57f2-4b74-87d9-bc44d35a06b4" />
 
 ---
 
