@@ -1,3 +1,8 @@
+## 실습과제 1
+
+<img width="964" height="351" alt="image" src="https://github.com/user-attachments/assets/df11879c-30bc-4fa4-b1fa-a1e9bdf0ada2" />
+<img width="481" height="347" alt="image" src="https://github.com/user-attachments/assets/4d7e59df-121c-4875-804f-4fd1bb695d9b" />
+<img width="477" height="344" alt="image" src="https://github.com/user-attachments/assets/08cc1c30-1056-4719-be3d-77c27aeed84e" />
 
 
 ## 실습과제 2
