@@ -13,23 +13,25 @@ void on_mouse(int event, int x, int y, int flag, void* userdata);
 
 struct Data {
 	Mat img;
-	Mat img2;
-	Point spt;
+	Point pt;
 };
-
 int main() {
 	Data data;
 	data.img = imread("lenna.bmp",IMREAD_GRAYSCALE);
-	data.img2 = data.img;
+	if (data.img.empty()) {
+		cerr << "Image load failed" << endl;
+		return -1;
+	}
 	namedWindow("img");
-	setMouseCallback("img", on_mouse, &data);
+	setMouseCallback("img", on_mouse,&data);
 	while (true) {
 		imshow("img", data.img);
-		int key = waitKey(33);
+		int key = waitKey(30);
 		if (key == 'q') {
 			break;
 		}
 	}
+	return 0;
 }
 
 
@@ -37,12 +39,15 @@ void on_mouse(int event, int x, int y, int flag, void* userdata) {
 	Data* pdata = (Data*)userdata;
 	switch (event) {
 	case EVENT_LBUTTONDOWN:
-		pdata->spt = Point(x, y);
+		pdata->pt = Point(x, y);
 		break;
 	case EVENT_LBUTTONUP:
-		Point pt(x, y);
-		pdata->img2 = pdata->img(Rect(pdata->spt, pt));
-		pdata->img2 += 100;
+		Point end(x, y);
+		if (pdata->pt.x == end.x && pdata->pt.y == end.y) {
+			break;
+		}
+		pdata->img(Rect(pdata->pt, end)) += Scalar(100);
 		break;
 	}
 }
+
