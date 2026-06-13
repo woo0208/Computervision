@@ -66,11 +66,10 @@ void on_mouse(int event, int x, int y, int flags, void* userdata) {
         int h = y2 - y1;
 
         // 너무 작은 영역이면 처리하지 않음
-        if (w <= 0 || h <= 0)
-            break;
+        if (x1 == x2 || y1 == y2) break;
 
         // 이미지 범위를 벗어나지 않도록 영역 제한
-        Rect rect(x1, y1, w, h);
+        Rect rect(Point(x1,y1), Point(x2,y2));
         rect &= Rect(0, 0, pdata->img.cols, pdata->img.rows);
 
         // 선택 영역 ROI 생성
