@@ -4,10 +4,12 @@
 using namespace cv;
 using namespace std;
 
+void on_mouse(int event, int x, int y, int flag, void* userdata);
 void on_trackbar(int pos, void* userdata);
 
 struct Data {
     int pos = 0;   // alpha 초기값
+    Point sp;
 };
 
 int main() {
@@ -56,6 +58,13 @@ int main() {
 
     return 0;
 }
+
+
+void on_mouse(int event, int x, int y, int flag, void* userdata) {
+    Data* pdata = (Data*)userdata;
+
+}
+
 
 void on_trackbar(int pos, void* userdata) {
     Data* pdata = (Data*)userdata;
