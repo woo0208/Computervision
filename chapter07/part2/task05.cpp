@@ -61,9 +61,6 @@ void on_mouse(int event, int x, int y, int flags, void* userdata) {
         int x2 = max(pdata->sp.x, ep.x);
         int y2 = max(pdata->sp.y, ep.y);
 
-        // 선택 영역의 폭과 높이 계산
-        int w = x2 - x1;
-        int h = y2 - y1;
 
         // 너무 작은 영역이면 처리하지 않음
         if (x1 == x2 || y1 == y2) break;
