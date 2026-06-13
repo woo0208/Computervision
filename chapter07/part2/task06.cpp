@@ -28,7 +28,6 @@ int main() {
     // 트랙바 범위: 0~9
     // 초기값은 data.sigma = 1
     createTrackbar("sigma", "img", &data.sigma, 9, on_trackbar, &data);
-    setTrackbarPos("sigma", "img", 1);
 
     setMouseCallback("img", on_mouse, &data);
 
